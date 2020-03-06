@@ -1,4 +1,4 @@
-package org.panda.crudtest;
+package org.panda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class CrudtestApplication {
     public static void main(String[] args) {
         SpringApplication.run(CrudtestApplication.class, args);
     }
-
 }
