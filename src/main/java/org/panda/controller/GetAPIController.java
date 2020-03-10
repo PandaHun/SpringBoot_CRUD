@@ -1,9 +1,7 @@
 package org.panda.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.panda.model.SearchVO;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -14,4 +12,13 @@ public class GetAPIController {
         return "this is getRequest";
     }
 
+    @GetMapping("/getRequestParam")
+    public String getRequestParam(@RequestParam String name) {
+        return "name is " + name + "\n";
+    }
+
+    @GetMapping("/getRequestParams")
+    public SearchVO getRequestParams(SearchVO searchVO) {
+        return searchVO;
+    }
 }
